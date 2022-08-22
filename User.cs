@@ -27,7 +27,6 @@ namespace User_Registration
                 Console.WriteLine("Name is not valid");
                 Console.ResetColor();
             }
-            Console.WriteLine(data);
         }
         public static void ValidLastName()
         {
@@ -47,7 +46,25 @@ namespace User_Registration
                 Console.WriteLine("Name is not valid");
                 Console.ResetColor();
             }
-            Console.WriteLine(data);
+        }
+        public static void ValidEmail()
+        {
+            Console.WriteLine("Enter First Name");
+            string data = Console.ReadLine();
+            string namepattern = "[a-zA-Z]+[.+-]+[0-9a-zA-Z]+[@][a-zA-Z]+[.]+[a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
+            Regex regexobj = new Regex(namepattern);
+            if (regexobj.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Name is valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Name is not valid");
+                Console.ResetColor();
+            }
         }
     }
 }
