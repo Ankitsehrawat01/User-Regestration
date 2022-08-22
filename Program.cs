@@ -5,6 +5,7 @@
         public static void Main(string[] args)
         {
             User.ValidFirstName();
+            User.ValidLastName();
         }
     }
 }
