@@ -29,5 +29,25 @@ namespace User_Registration
             }
             Console.WriteLine(data);
         }
+        public static void ValidLastName()
+        {
+            Console.WriteLine("Enter First Name");
+            string data = Console.ReadLine();
+            string namepattern = "^[A-Z]{1}[A-Za-z]{3,}";
+            Regex regexobj = new Regex(namepattern);
+            if (regexobj.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Name is valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Name is not valid");
+                Console.ResetColor();
+            }
+            Console.WriteLine(data);
+        }
     }
 }
