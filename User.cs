@@ -89,7 +89,7 @@ namespace User_Registration
         {
             Console.WriteLine("Enter Password");
             string data = Console.ReadLine();
-            string namepattern = "^[A-Z]{1}[A-Za-z0-9]{6,}[0-9]{1}$";
+            string namepattern = "^[A-Z]{1}[A-Za-z0-9]{5,}[0-9]{1}[~`!@#$%^&*()-_+={}[]|\\;:\"<>,./?]{1}$";
             Regex regexobj = new Regex(namepattern);
             if (regexobj.IsMatch(data))
             {
