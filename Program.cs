@@ -6,6 +6,8 @@
         {
             User.ValidFirstName();
             User.ValidLastName();
+            User.ValidEmail();
+            User.ValidPhoneNumber();
         }
     }
 }

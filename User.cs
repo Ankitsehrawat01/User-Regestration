@@ -30,7 +30,7 @@ namespace User_Registration
         }
         public static void ValidLastName()
         {
-            Console.WriteLine("Enter First Name");
+            Console.WriteLine("Enter Last Name");
             string data = Console.ReadLine();
             string namepattern = "^[A-Z]{1}[A-Za-z]{3,}";
             Regex regexobj = new Regex(namepattern);
@@ -49,20 +49,39 @@ namespace User_Registration
         }
         public static void ValidEmail()
         {
-            Console.WriteLine("Enter First Name");
+            Console.WriteLine("Enter E-Mail");
             string data = Console.ReadLine();
-            string namepattern = "[a-zA-Z]+[.+-]+[0-9a-zA-Z]+[@][a-zA-Z]+[.]+[a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
+            string namepattern = "[a-zA-Z]+([.+-])+[0-9a-zA-Z]+[@][a-zA-Z]+[.]+[a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
             Regex regexobj = new Regex(namepattern);
             if (regexobj.IsMatch(data))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Name is valid");
+                Console.WriteLine("E-mail is valid");
                 Console.ResetColor();
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Name is not valid");
+                Console.WriteLine("E-mail is not valid");
+                Console.ResetColor();
+            }
+        }
+        public static void ValidPhoneNumber()
+        {
+            Console.WriteLine("Enter Phone Number");
+            string data = Console.ReadLine();
+            string namepattern = "^[0-9]{2,4}[ ]{1}[6-9]{1}[0-9]{9}$";
+            Regex regexobj = new Regex(namepattern);
+            if (regexobj.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Phone Number is valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Phone Number is not valid");
                 Console.ResetColor();
             }
         }
