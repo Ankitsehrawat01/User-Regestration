@@ -4,11 +4,11 @@
     {
         public static void Main(string[] args)
         {
-            User.ValidFirstName();
-            User.ValidLastName();
+            //User.ValidFirstName();
+            //User.ValidLastName();
             User.ValidEmail();
-            User.ValidPhoneNumber();
-            User.ValidPassword();
+            //User.ValidPhoneNumber();
+            //User.ValidPassword();
         }
     }
 }
