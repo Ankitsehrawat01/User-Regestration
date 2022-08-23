@@ -85,5 +85,24 @@ namespace User_Registration
                 Console.ResetColor();
             }
         }
+        public static void ValidPassword()
+        {
+            Console.WriteLine("Enter Password");
+            string data = Console.ReadLine();
+            string namepattern = "^[A-Za-z]{8,}$";
+            Regex regexobj = new Regex(namepattern);
+            if (regexobj.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Password is valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Password is not valid");
+                Console.ResetColor();
+            }
+        }
     }
 }

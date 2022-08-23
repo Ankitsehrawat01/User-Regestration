@@ -8,6 +8,7 @@
             User.ValidLastName();
             User.ValidEmail();
             User.ValidPhoneNumber();
+            User.ValidPassword();
         }
     }
 }
